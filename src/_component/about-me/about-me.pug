@@ -1,0 +1,49 @@
+
+//- data come here
+- 
+    var header = '#about me'
+    var imagePath = "asset/image/dragos.jpg"
+    var myFullName = "Vlasie Dragos"
+    var myTitle = "Front-End Developer"
+    var slogan = `I’m a problem solver driven by challenge. The ability to quickly learn and master new technologies helped me build a strong technical knowledge in front-end development. I would love to meet like minded people, so: Let’s have a chat!`
+    var achievement = {
+        title: 'Achievement',
+        content: `I’m a self-taught Web Developer.`
+    }
+ 
+    var coolStuff = {
+        title: 'grab cool stuff',
+        buttonList: [
+            {
+                url: 'https://github.com/ghismovd/the-cv',
+                icon: 'github',
+                label: 'Click to visit the GitHub project source'
+            },
+          {
+                url: "asset/doc/CV-Vlasie Dragos.docx",
+                icon: "file-word",
+                label: `Click to download the "full experience" Microsoft Word version`
+            }
+        ]
+    }
+//- the view comes here
+#about-me
+.about-me
+    .about-me__header=header
+    .about-me__wrapper
+        .about-me__avatar-wrapper
+            img.about-me__avatar(src=imagePath)
+        .about-me__full-name=myFullName
+        .about-me__title=myTitle
+        .about-me__slogan=slogan
+
+        .about-me__title=achievement.title
+        .about-me__content=achievement.content
+
+        .about-me__title=coolStuff.title
+        .about-me__link-list
+            each button in coolStuff.buttonList
+                a.about-me__link(href=button.url)
+                    span.about-me__link-description=button.label
+                    span(class=`my-cv__icon--${button.icon}`)
+

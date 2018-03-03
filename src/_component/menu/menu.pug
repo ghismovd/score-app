@@ -1,0 +1,41 @@
+-
+    var menuList = [
+        {
+        label: 'home',
+        icon: 'home',
+        link: '#landing-page'
+        },
+        {
+        label: 'about me',
+        icon: 'user-tie',
+        link: '#about-me'
+        },
+        {
+        label: 'awards',
+        icon: 'trophy',
+        link: '#award'
+        },
+        {
+        label: 'experience',
+        icon: 'airplane',
+        link: '#experience'
+        },
+        {
+        label: 'what I can do',
+        icon: 'hammer',
+        link: '#what-can-i-do',
+        }
+    ]
+#menu
+
+    input.menu__input(type="checkbox", name="other-name", id="menu__slide")
+    label.menu__go-to(for="menu__slide")
+        
+        span.my-cv__icon--menu
+    .menu
+        .menu__list
+            each menu in menuList
+                a.menu__link(href=menu.link)
+                    span(class=`my-cv__icon--${menu.icon}`)
+                    span.menu__label=menu.label
+

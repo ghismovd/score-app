@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    //12 px minimum font size
+    // 24-12 max - min font size
+    // 100vmin checks if landscape or portarait mode
+    // 400px min screen size
+    // 800 -400 max screen - min screen 
+    font-size: calc(12px + (24 - 12)*((100vmin - 400px)/(800 - 400)));
+}
+
+html,body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
