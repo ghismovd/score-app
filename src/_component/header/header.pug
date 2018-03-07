@@ -1,0 +1,68 @@
+-
+    var myFullName = "Vlasie Dragos"
+    var myJobTitle = "KICK YOUR GAME INTO TOUCH"
+    var socialList = [
+ {
+      "icon": "google-plus2",
+      "url": "https://www.facebook.com/vlasie.dragos.7"
+    },
+    {
+      "icon": "facebook2",
+      "url": "https://www.facebook.com/vlasie.dragos.7"
+    },
+    {
+      "icon": "youtube",
+      "url": "https://www.youtube.com/channel/UCx8iVBPZC8UkSkG86fuHVUw"
+    },
+    {
+      "icon": "github",
+      "url": "https://github.com/ghismovd"
+    },
+    {
+      "icon": "stackoverflow",
+      "url": "https://stackoverflow.com/users/8741560/vlasie-dragos"
+    },
+    {
+      "icon": "skype",
+      "url": "skype:vlasiedragos?call"
+    },
+    {
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/dragos-vlasie-17a452131/"
+    }
+    ]
+#header-page
+.header-page__nav
+  a.header-page__leaderboard Leaderboard
+    span 
+      img(src="_asset/image/cup.png", alt="cup img")
+  h1.header-page__name=myFullName
+  .header-page__add-score add score
+.header-page__overlay
+.header-page__cover
+  h2.header-page__title=myJobTitle
+    h2.header-page__title
+  .header-page__mouse-icon
+
+
+//- .header-page
+//-   .header-page__wrapper
+//-     h1.header-page__name=myFullName
+//-     h2.header-page__title=myJobTitle
+//-     ul.header-page__social
+//-       each social, key in socialList
+//-         li.header-page__item
+//-           label.header-page__label(for=`message-box-id-${key}`)
+//-             span(class=`my-cv__icon--${social.icon}`)
+//-     .header-page__box-body
+//-       input.header-page__box-radio(type="radio", name="awesome-radio", checked, id="default-message-radio")
+//-       .header-page__box-message Click the above icons to reveal
+//-       .header-page__box-header
+//-         .header-page__box-info Click to visit
+//-         label.header-page__box-close(for="default-message-radio") &times;
+//-       each social, key in socialList
+//-         input.header-page__box-radio(type="radio", name="awesome-radio", id=`message-box-id-${key}`)
+//-         .header-page__box-message
+//-           a.header-page__box-link(href=social.url, target="_blank")=social.url
+
+
